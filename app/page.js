@@ -4,7 +4,7 @@
  */
 
 import Link from "next/link";
-import LoginPage from "./_ui/LoginPage.js";
+import LoginPage from "./LoginPage.js"
 
 export default async function Page() {
     return (

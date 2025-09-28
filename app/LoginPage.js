@@ -1,5 +1,5 @@
 //@ts-check
-//
+
 "use client";
 
 /**
@@ -7,7 +7,7 @@
  */
 
 import Form from "next/form";
-import { authLogin } from "../(auth)/actions.js";
+import { authLogin } from "./(auth)/actions.js";
 
 /**@type{() => ReactNode}*/
 export default function LoginPage() {

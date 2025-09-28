@@ -1,7 +1,17 @@
 //@ts-check
-"use client"
+
+import SignupPage from "./Signup";
 
 
-export default function SignUpPage() {
-  return <h1>signup</h1>
-}
+export const metadata = {
+  title: "CRM - signup",
+  description: "CRM",
+};
+
+export default function Page() {
+    return (
+        <main>
+            <SignupPage/>
+        </main>
+   );
+};
