@@ -1,17 +1,15 @@
-/**
- * @fileoverview Next.js middleware for authentication
- * @type-check
- */
-
-import { updateSession } from "./lib/supabase/middleware.js"
+//@ts-check
 
 /**
- * Middleware function to handle authentication
- * @param {import('next/server').NextRequest} request - Next.js request object
- * @returns {Promise<import('next/server').NextResponse>} Next.js response
+ * @typedef {import("next/server").NextRequest} NextRequest
+ * @typedef {import("next/server").NextResponse} NextResponse
  */
+
+import updateSession from "./lib/supabase/middleware.js"
+
+/**@type{(request: NextRequest) => Promise<NextResponse>}*/
 export async function middleware(request) {
-  return await updateSession(request)
+  return await updateSession(request);
 }
 
 export const config = {

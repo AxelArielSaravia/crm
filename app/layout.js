@@ -1,27 +1,24 @@
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
+//ts-check
+
+/**
+ * @typedef {import("react").ReactNode} ReactNode
+ */
+
 import { Analytics } from "@vercel/analytics/next"
-import { Suspense } from "react"
 import "./globals.css"
 
 /** @type {import('next').Metadata} */
 export const metadata = {
-  title: "CRM AI Chat",
-  description: "AI-Powered Customer Relationship Management",
-  generator: "v0.app",
+  title: "CRM",
+  description: "CRM",
 }
 
-/**
- * Root layout component
- * @param {Object} props - Component props
- * @param {React.ReactNode} props.children - Child components
- * @returns {JSX.Element} Root layout
- */
+/**@type{(a: {children: ReactNode}) => ReactNode}*/
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}>
+    <html lang="es">
       <body className="font-sans">
-        <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+        {children}
         <Analytics />
       </body>
     </html>
